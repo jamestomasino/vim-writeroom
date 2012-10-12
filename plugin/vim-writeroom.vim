@@ -8,13 +8,14 @@ let g:vimwriteroommode=0
 
 function VimWriteRoom ()
 	if (g:vimwriteroommode == 0)
+
 		let g:vimwriteroommode=1
+
 		let s:oldlines=&lines
 		let s:oldcolumns=&columns
 		let s:oldtextwidth=&textwidth
 		let s:oldguioption=&guioptions
 		let s:oldfuoptions=&fuoptions
-		let s:oldbreakat=&breakat
 		let s:oldformatoptions=&formatoptions
 		let s:oldcolorscheme=g:colors_name
 		
@@ -26,15 +27,14 @@ function VimWriteRoom ()
 		let s:isnumber=&number
 		let s:isrelativenumber=&relativenumber
 
-
 		colorscheme koehler
+
 		set lines=50
 		set columns=80
 		set textwidth=80
 		set guioptions-=r
 		set fuoptions=background:#00000000
 		set fu
-		set breakat=\ |@-+;:,./?^I
 		set nolist
 		set formatoptions=l1
 		set wrap
@@ -56,9 +56,14 @@ function VimWriteRoom ()
 		let &textwidth=s:oldtextwidth
 		let &guioptions=s:oldguioption
 		let &fuoptions=s:oldfuoptions
-		let &breakat=s:oldbreakat
 		let &formatoptions=s:oldformatoptions
 		
+		unlet s:oldlines
+		unlet s:oldcolumns
+		unlet s:oldtextwidth
+		unlet s:oldguioption
+		unlet s:oldfuoptions
+		unlet s:oldformatoptions
 		
 		execute 'colorscheme '.s:oldcolorscheme
 
@@ -103,6 +108,14 @@ function VimWriteRoom ()
 		else
 			set norelativenumber
 		endif
+
+		unlet s:isfu
+		unlet s:iswrap
+		unlet s:islist
+		unlet s:islinebreak
+		unlet s:iscursorline
+		unlet s:isnumber
+		unlet s:isrelativenumber
 
 		unmap k
 		unmap j
