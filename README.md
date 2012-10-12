@@ -16,6 +16,11 @@ By default, the `<F5>` key is mapped to toggle vim-writeroom on and off. If this
 * Add support to play nicely with [numbers.vim](https://github.com/myusuf3/numbers.vim)
 * Expand help documents
 
+### Screenshot ###
+
+![Example of Use](http://jamestomasino.com/images/vim-writeroom.jpg)
+
+
 ### Credits ####
 
 vim-writeroom is written by [James Tomasino](https://github.com/jamestomasino). 
