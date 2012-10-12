@@ -6,15 +6,14 @@ vim-writeroom is a [pathogen](https://github.com/tpope/vim-pathogen) style vim p
 
 ### Use ###
 
-By default, the `<F5>` key is mapped to trigger vim-writeroom. If this key is already bound, vim-writeroom will not override it. The line below is used internally to set up the binding. You can mimic the binding with your own key or sequence in your .vimrc file to customize its use.
+By default, the `<F5>` key is mapped to toggle vim-writeroom on and off. If this key is already bound, vim-writeroom will not override it. The line below is used internally to set up the binding. You can mimic the binding with your own key or sequence in your .vimrc file to customize its use.
 
     nnoremap <F5> :call VimWriteRoom()<CR>
-    
-There is currently not an option to toggle vim-writeroom off again.
 
 ### Roadmap ###
 
-* Make `<F5>` or any call to `VimWriteRoom()` toggle the experience back and forth
+* ~~Make `<F5>` or any call to `VimWriteRoom()` toggle the experience back and forth~~
+* Add support to play nicely with [numbers.vim](https://github.com/myusuf3/numbers.vim)
 * Expand help documents
 
 ### Credits ####
