@@ -12,7 +12,7 @@ By default, the `<F5>` key is mapped to toggle vim-writeroom on and off. If this
 
 Note: there is a bug in MacVim on Lion that can create display issues in full-screen where the OS native background is displayed instead of vim's background. To fix this problem in the meantime, you can try running this command from your terminal window:
 
-    defaults write org.vim.MacVim MMNativeFullScreen
+    defaults write org.vim.MacVim MMNativeFullScreen 0
 
 ### Roadmap ###
 
