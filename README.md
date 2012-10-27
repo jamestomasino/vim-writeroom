@@ -29,7 +29,7 @@ Note: there is a bug in MacVim on Lion that can create display issues in full-sc
 
 ### Credits ####
 
-vim-writeroom is written by [James Tomasino](https://github.com/jamestomasino). 
+vim-writeroom is written by [James Tomasino](https://github.com/jamestomasino). [![endorse](http://api.coderwall.com/jamestomasino/endorsecount.png)](http://coderwall.com/jamestomasino)
 
 It was inspired, and much of the original code was lifted, from a [blog post](https://mutelight.org/vim-is-writeroom-level-2) by Brandur.
 
