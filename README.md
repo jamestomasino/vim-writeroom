@@ -10,15 +10,21 @@ By default, the `<F5>` key is mapped to toggle vim-writeroom on and off. If this
 
     nnoremap <F5> :call VimWriteRoom()<CR>
 
-Note: there is a bug in MacVim on Lion that can create display issues in full-screen where the OS native background is displayed instead of vim's background. To fix this problem in the meantime, you can try running this command from your terminal window:
+_Note_: there is a bug in MacVim on Lion that can create display issues in full-screen where the OS native background is displayed instead of vim's background. To fix this problem in the meantime, you can try running this command from your terminal window:
 
     defaults write org.vim.MacVim MMNativeFullScreen 0
+    
+The following are a number of configuration variables that can be set to customize your vim-writeroom experience:
+
+    g:vimwriteroom = set to disable plugin
+    g:vimwriteroomcolorscheme = colorscheme to show in writeroom mode
+
 
 ### Roadmap ###
 
 * ~~Make `<F5>` or any call to `VimWriteRoom()` toggle the experience back and forth~~
-* ~~Add support for configurable color options and various colorschemes
-* Add variable to use the default <F5> mapping, or disable it to avoid conflicts
+* ~~Add support for configurable color options and various colorschemes~~
+* Add variable to use determine the use of the default <F5> toggle mapping
 * Fix [full-screen issues in Lion](http://code.google.com/p/macvim/issues/detail?id=364)
 * Expand help documents
 
