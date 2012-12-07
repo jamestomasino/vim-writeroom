@@ -1,7 +1,10 @@
 if exists("g:vimwriteroom") 
-	echom 'Failed loading vim-writeroom'
 	finish
 endif
+
+" Global Varibales used for configuration:
+"   g:vimwriteroom = set to disable plugin
+"   g:vimwriteroomcolorscheme = colorscheme to show in writeroom mode
 
 let g:vimwriteroom=1
 let g:vimwriteroommode=0
@@ -13,6 +16,7 @@ function VimWriteRoom ()
 
 		let s:oldlines=&lines
 		let s:oldcolumns=&columns
+		let s:oldcolorcolumn=&colorcolumn
 		let s:oldtextwidth=&textwidth
 		let s:oldguioption=&guioptions
 		let s:oldfuoptions=&fuoptions
@@ -27,10 +31,13 @@ function VimWriteRoom ()
 		let s:isnumber=&number
 		let s:isrelativenumber=&relativenumber
 
-		colorscheme koehler
+		if exists("g:vimwriteroomcolorscheme")
+			execute 'colorscheme ' . g:vimwriteroomcolorscheme
+		endif
 
 		set lines=50
 		set columns=80
+		set colorcolumn=0
 		set textwidth=80
 		set guioptions-=r
 		set fuoptions=background:#00000000
@@ -53,6 +60,7 @@ function VimWriteRoom ()
 		let g:vimwriteroommode=0
 		let &lines=s:oldlines
 		let &columns=s:oldcolumns
+		let &colorcolumn=s:oldcolorcolumn
 		let &textwidth=s:oldtextwidth
 		let &guioptions=s:oldguioption
 		let &fuoptions=s:oldfuoptions
@@ -60,12 +68,13 @@ function VimWriteRoom ()
 		
 		unlet s:oldlines
 		unlet s:oldcolumns
+		unlet s:oldcolorcolumn
 		unlet s:oldtextwidth
 		unlet s:oldguioption
 		unlet s:oldfuoptions
 		unlet s:oldformatoptions
 		
-		execute 'colorscheme '.s:oldcolorscheme
+		execute 'colorscheme ' . s:oldcolorscheme
 
 		if (s:isfu == 1)
 			set fu
