@@ -17,7 +17,7 @@ Note: there is a bug in MacVim on Lion that can create display issues in full-sc
 ### Roadmap ###
 
 * ~~Make `<F5>` or any call to `VimWriteRoom()` toggle the experience back and forth~~
-* ~~Add support for configurable color options and various colorschemes
+* ~~Add support for configurable color options and various colorschemes~~
 * Add variable to use the default <F5> mapping, or disable it to avoid conflicts
 * Fix [full-screen issues in Lion](http://code.google.com/p/macvim/issues/detail?id=364)
 * Expand help documents
