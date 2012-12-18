@@ -35,7 +35,7 @@ function VimWriteRoom ()
 			execute 'colorscheme ' . g:vimwriteroomcolorscheme
 		endif
 
-		set lines=50
+		set lines=999
 		set columns=80
 		set colorcolumn=0
 		set textwidth=80
@@ -51,7 +51,7 @@ function VimWriteRoom ()
 		set norelativenumber
 
 		" hide ~'s
-		hi NonText guifg=bg
+		hi NonText guifg=bg guibg=bg
 
 		" make k and j navigate display lines
 		map k gk
