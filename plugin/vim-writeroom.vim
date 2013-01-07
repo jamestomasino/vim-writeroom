@@ -24,6 +24,8 @@ function VimWriteRoom ()
 		let s:oldcolorscheme=g:colors_name
 		
 		let s:isfu=&fu
+		let s:showtabline=&showtabline
+		let s:laststatus=&laststatus
 		let s:iswrap=&wrap
 		let s:islist=&list
 		let s:islinebreak=&linebreak
@@ -49,6 +51,8 @@ function VimWriteRoom ()
 		set nocursorline
 		set nonumber
 		set norelativenumber
+		set showtabline=0
+		set laststatus=0
 
 		" hide ~'s
 		hi NonText guifg=bg guibg=bg
@@ -65,7 +69,9 @@ function VimWriteRoom ()
 		let &guioptions=s:oldguioption
 		let &fuoptions=s:oldfuoptions
 		let &formatoptions=s:oldformatoptions
-		
+		let &showtabline=s:showtabline
+		let &laststatus=s:laststatus
+
 		unlet s:oldlines
 		unlet s:oldcolumns
 		unlet s:oldcolorcolumn
